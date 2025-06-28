@@ -84,8 +84,7 @@ body {
 }
 
 
-
-  @media (orientation: portrait) {
+@media (orientation: portrait) {
 .header {
     position: fixed;
     top: 2vh;
@@ -153,7 +152,7 @@ body {
     right:3vw;
   }
 }
-   @media (orientation: landscape) {
+@media (orientation: landscape) {
 .header {
     position: fixed;
     top: 2vh;
@@ -179,7 +178,7 @@ body {
   text-decoration: none;
 }
  .header a p {
-    font-size: 7em;
+    font-size: 5em;
     text-align: center;
     top:0;
     letter-spacing: 1em;
@@ -225,7 +224,7 @@ body {
     top: 15vh;
     right: 0;
     font-size:1.5em;
-    width:10vw;
+    width:14vw;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Safari対応 */
