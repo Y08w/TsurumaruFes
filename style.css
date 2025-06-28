@@ -1,0 +1,348 @@
+body {
+       margin: 0;
+      height: 100vh;
+      background: url('img/background.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      align-items: center;
+      justify-content: center;
+}  
+
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: brown url("img/header.svg") no-repeat center center / contain;
+  transition: all 1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#loading.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loading .loader,
+#loading .loader:before,
+#loading .loader:after {
+  background: #ffffff;
+  animation: loading 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+#loading .loader {
+  color: #ffffff;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+}
+
+#loading .loader:before,
+#loading .loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+#loading .loader:before {
+  left: -1.5em;
+  animation-delay: -0.32s;
+}
+
+#loading .loader:after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes loading {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+@keyframes loading {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+
+
+  @media (orientation: portrait) {
+.header {
+    position: fixed;
+    top: 2vh;
+    width:90vw;
+    height:9vh;
+    padding-left:2vw;
+    padding-right:2vw;
+    margin-top:0.2vh;
+    margin-right:2vw;
+    margin-left:2vw;
+    border-radius:25px 25px 25px 25px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    border-top : solid 1px white;
+    border-bottom: solid 1px rgb(201, 201, 201);
+    z-index: 100;
+    text-align: center;
+  }
+  .header p{
+    font-size: 5em;
+    margin-top:0;
+  }
+  .header a:hover {
+    background:rbga(255,255,255,0.4);
+  }
+.header img {
+    position: fixed;
+    top:2vh;
+    left:5vw;
+    width:auto;
+    height:9vh;
+    border-radius: 10% 10% 10% 10%;
+    z-index: 20;
+}
+.scroll {
+  margin-top: 15vh;
+  padding-top: 20vh;
+    margin-left: 20vw;
+    margin-right:20vw;
+    width:60vw;
+
+}
+.scroll h2 {
+  font-size:3em;
+  text-align: center;
+  border-bottom: 5px dashed rgba(172, 22, 22, 0.37);
+  margin-left: 2vw;
+  margin-right: 2vw;
+  padding-bottom: 1vh;
+  padding-top: 3vh;
+
+}
+  .pcmenu {
+    display: none;
+  }
+  .mobilemenu {
+    position:fixed;
+
+  }
+  .mobilemenubutton {
+    display: none;
+    top:2vh;
+    right:3vw;
+  }
+}
+   @media (orientation: landscape) {
+.header {
+    position: fixed;
+    top: 2vh;
+    width:90vw;
+    height:12vh;
+    padding-left:2vw;
+    padding-right:2vw;
+    margin-top:0.2vh;
+    margin-right:2vw;
+    margin-left:2vw;
+    border-radius:50px 50px 50px 50px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    border-top : solid 1px white;
+    border-bottom: solid 1px rgb(201, 201, 201);
+    z-index: 100;
+    text-align: center;
+  }
+
+  .header a {
+  text-decoration: none;
+}
+ .header a p {
+    font-size: 7em;
+    text-align: center;
+    top:0;
+    letter-spacing: 1em;
+    text-shadow: 5px 5px 5px black;
+    margin-top: 0;
+    color:white;
+    font-family: serif;
+}
+  .icon {
+    position: fixed;
+    top:0;
+    left:5vw;
+    width:auto;
+    height:12vh;
+    border-radius: 10% 10% 10% 10%;
+}
+
+.scroll {
+  margin-top: 0;
+  padding-top: 30vh;
+    margin-left: 20vw;
+    margin-right:20vw;
+    width:60vw;
+}
+.scroll h2 {
+  font-size:4em;
+  text-align: center;
+  border-bottom: 5px dashed rgba(172, 22, 22, 0.37);
+  margin-left: 2vw;
+  margin-right: 2vw;
+  padding-bottom: 1vh;
+  padding-top: 3vh;
+
+}
+  .mobilemenu {
+    display:none;
+  }
+  .mobilemenubutton {
+    display: none;
+  }
+  .pcmenu {
+    position: fixed;
+    top: 15vh;
+    right: 0;
+    font-size:1.5em;
+    width:10vw;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.5);
+  }
+  .pcmenu ul {
+    padding-left: 0.1vw;
+  }
+  .pcmenu li {
+    list-style:none;
+  }
+  .pcmenu a {
+    list-style: none;
+    text-align: left;
+    color:rgb(150, 150, 150);
+  }
+   .pcmenu a:hover {
+      color: rgb(255, 255, 255);            /* ホバー時の文字色 */
+      font-size:1.7em;
+    }
+}
+
+
+
+.PV iframe {  
+    border-radius:25px 25px 25px 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    margin-top: -100px; /* アンカーで飛んだとき用のずらし調整 */
+    padding-bottom: 0vh;
+    width: 60vw;
+    height: 34vw;
+}
+
+#Schedule {
+    border-radius:25px 25px 25px 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    padding-bottom: 5vh;
+}
+#Schedule img {
+    position:relative;
+    width:56vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+#Map {
+    border-radius:25px 25px 25px 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    padding-bottom: 5vh;
+}
+#Map img {
+    position:relative;
+    width:56vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+#Gym {
+    border-radius:25px 25px 25px 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    padding-bottom: 5vh;
+}
+#Gym img {
+    position:relative;
+    width:56vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+#Recreation {
+    border-radius:25px 25px 25px 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    padding-bottom: 5vh;
+}
+#Recreation img {
+    position:relative;
+    width:56vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+#Information {
+    border-radius:25px 25px 25px 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    padding-bottom: 5vh;
+}
+#Information img {
+    position:relative;
+    width:56vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+#Access {
+    border-radius:25px 25px 25px 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
+    background: rgba(255, 0, 0, 0.2);
+    padding-bottom: 5vh;
+}
+#Access img {
+    position:relative;
+    width:56vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
