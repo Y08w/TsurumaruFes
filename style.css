@@ -8,8 +8,7 @@ body {
       justify-content: center;
       position: relative;
 }  
-body::before {
-  content: "";
+.background {
   position: fixed;
   top: 0;
   left: 0;
