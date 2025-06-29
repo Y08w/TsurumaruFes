@@ -15,3 +15,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+           document.addEventListener('DOMContentLoaded', function () {
+             const topButton = document.getElementById('mobilemenubutton');
+             if (topButton) {
+                 topButton.addEventListener('click', function (e) {
+                 e.preventDefault();
+                 const content = document.getElementById('hiddenContent');
+                 content.classList.toggle('open');
+               });
+             }
+           });
