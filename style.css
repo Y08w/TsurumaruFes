@@ -89,12 +89,15 @@ ul {
 
 
 
-  @media (orientation: portrait) {
+@media screen and (max-width: 768px), screen and (orientation: portrait) {
 .header {
     position: fixed;
     top: 2vh;
     width:90vw;
     height:9vh;
+    display: flex;
+    justify-content: center; /* 横中央 */
+    align-items: center;     /* 縦中央 */
     padding-left:2vw;
     padding-right:2vw;
     margin-top:0.2vh;
@@ -114,8 +117,13 @@ ul {
   text-decoration: none;
 }
   .header p{
-
     font-size: 8vw;
+    line-height: 12vh; /* .header の height と合わせる */
+    letter-spacing: 1em;
+    text-shadow: 5px 5px 5px black;
+    margin: 0;
+    color:white;
+    font-family: serif;
     letter-spacing: 0.5em;
     text-decoration: none;
     text-shadow: 5px 5px 5px black;
@@ -128,7 +136,7 @@ ul {
   }
 .header .icon {
     position: fixed;
-    top:2vh;
+    top:0vh;
     left:5vw;
     width:auto;
     height:9vh;
@@ -137,7 +145,7 @@ ul {
 }
 .scroll {
   margin-top: 15vh;
-  padding-top: 20vh;
+  padding-top: 10vh;
     margin-left: 20vw;
     margin-right:20vw;
     width:60vw;
@@ -177,6 +185,7 @@ ul {
     -webkit-backdrop-filter: blur(10px); /* Safari対応 */
     background: rgba(255, 255, 255, 0.2);
     border-radius: 0 0 25px 25px;
+    z-index: 99;
   }
   .mobilemenu li {
     padding-bottom: 10px;
@@ -197,14 +206,20 @@ ul {
     top:0vh;
     right:3vw;
     height:9vh;
+    z-index: 101;
   }
 }
+
    @media (orientation: landscape) {
 .header {
     position: fixed;
     top: 2vh;
     width:90vw;
     height:12vh;
+    display: flex;
+    justify-content: center; /* 横中央 */
+    align-items: center;     /* 縦中央 */
+
     padding-left:2vw;
     padding-right:2vw;
     margin-top:0.2vh;
@@ -217,6 +232,7 @@ ul {
     background: rgba(255, 0, 0, 0.2);
     border-top : solid 1px white;
     border-bottom: solid 1px rgb(201, 201, 201);
+
     z-index: 100;
     text-align: center;
   }
@@ -225,12 +241,11 @@ ul {
   text-decoration: none;
 }
  .header a p {
-    font-size: 5em;
-    text-align: center;
-    top:0;
+    font-size: 7vw;
+    line-height: 12vh; /* .header の height と合わせる */
     letter-spacing: 1em;
     text-shadow: 5px 5px 5px black;
-    margin-top: 0;
+    margin: 0;
     color:white;
     font-family: serif;
 }
